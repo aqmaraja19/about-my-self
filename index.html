@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Biodata - Hijau Minimal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green-600: #16a34a;
+      --green-500: #22c55e;
+      --green-50: #f0fdf4;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --radius: 12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: light;
+    }
+    footer {
+      color: #000000;
+      padding: 30px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap; /* agar tetap rapi di layar kecil */
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--green-50),#ffffff);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .card{width:100%;max-width:860px;background:var(--card-bg);border-radius:var(--radius);box-shadow:0 8px 30px rgba(16,24,40,0.08);overflow:hidden;display:grid;grid-template-columns:320px 1fr}
+    @media (max-width:720px){.card{grid-template-columns:1fr;padding-bottom:16px}.sidebar{order:2}}.sidebar{padding:32px;background:linear-gradient(180deg,var(--green-600),var(--green-500));color:white;display:flex;flex-direction:column;gap:18px}
+.avatar{width:120px;height:120px; border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:38px;color:white;flex-shrink:0}
+.name{font-size:20px;font-weight:700}
+.role{opacity:0.95;font-weight:500}
+.contact{margin-top:6px;font-size:14px;color:rgba(255,255,255,0.92)}
+.muted{opacity:0.9}
+
+.main{padding:32px}
+.section{margin-bottom:18px}
+h3{margin:0 0 10px 0;font-size:16px;color:#111827}
+p{margin:0;color:var(--muted);line-height:1.45}
+
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.chip{background:#f3f7f5;border-radius:8px;padding:10px;font-weight:600;color:var(--green-600);display:inline-block}
+
+.skill{margin-bottom:10px}
+.skill .bar{height:10px;background:#eef6ee;border-radius:999px;overflow:hidden}
+.skill .fill{height:100%;background:linear-gradient(90deg,var(--green-600),#34d399);border-radius:999px}
+
+.meta{font-size:13px;color:var(--muted)}
+
+.actions{display:flex;gap:10px;margin-top:8px}
+.btn{padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+.btn--outline{background:transparent;border:1px solid rgba(16,24,40,0.06)}
+.btn--green{background:var(--green-600);color:white}
+
+  </style>
+</head>
+<body>
+  <article class="card" role="article">
+    <aside class="sidebar">
+      <div style="display:flex;gap:14px;align-items:center">
+        <div>
+          <div class="name">Aqmar Rafisky Mahhadian</div>
+          <div class="role">Videographer & Content Creator</div>
+        </div>
+      </div><div class="contact">
+    <div class="meta">Location</div>
+    <div>Semarang, Indonesia</div>
+  </div>
+
+  <div class="contact">
+    <div class="meta">Contact</div>
+    <div>Email: <span class="muted">aqmar.rafisky@gmail.com</span></div>
+    <div>Telepon: <a href="https://wa.me/6285702844155">+62 857 0284 4155</a></div>
+  </div>
+
+  <div>
+    <div class="meta">Skills</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+      <div class="chip">Video Editing</div>
+      <div class="chip">Videographer</div>
+      <div class="chip">Small Programming - HTML File</div>
+    </div>
+  </div>
+
+  <div style="margin-top:auto;display:flex;gap:8px;align-items:center">
+    <button class="btn btn--green" onclick="window.print()">Print / Save PDF</button>
+    <button class="btn btn--outline" onclick="downloadHTML()">Download HTML</button>
+  </div>
+</aside>
+
+<main class="main">
+  <section class="section">
+    <h3>About Me</h3>
+    <p>Name:Aqmar Rafisky M.</p>
+    <p>Nickname:Aqmar</p>
+    <p>Class:7D ICT</p>
+    <p>School:MTsN 2 Kota Semarang</p>
+    <p>Old:13 Years</p>
+    <p>Hobby:Learn Something About Programming</p>
+    <p>Addres:kapas V Street Number 60</p>
+  </section>
+
+  <section class="section">
+    <h3>Experience</h3>
+    <div>
+      <div style="font-weight:700">Content Creator</div>
+      <div class="meta">2024 — 2025</div>
+      <p class="meta" style="margin-top:6px">Making Train Cinematic Videos And Minecraft Game Content On My Tiktok And Youtube.</p>
+    </div>
+  </section>
+
+  <section class="section">
+  </section>
+
+  <section class="section">
+    <h3>Education</h3>
+    <div style="font-weight:700">Sekolah Menengah Pertama — MTsN 2 Kota Semarang</div>
+    <div class="meta">2025</div>
+    <p class="meta" style="margin-top:6px">I am a junior high school student who attends MTsN 2 Semarang City.</p>
+  </section>
+
+  <section class="section">
+    <h3>Technical Expertise</h3>
+    <div class="skill">
+      <div style="display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px"><span>Video Editing</span><span>90%</span></div>
+      <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+      <div style="display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px"><span>Videographer</span><span>75%</span></div>
+      <div class="bar"><div class="fill" style="width:75%"></div></div>
+    </div>
+    <div class="skill">
+      <div style="display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px"><span>Small Programming - HTML File</span><span>70%</span></div>
+      <div class="bar"><div class="fill" style="width:70%"></div></div>
+    </div>
+  </section>
+
+
+</main>
+  <footer>
+    Di Buat Dengan Bantuan Chat GPT
+  </footer>
+
+  </article>  <script>
+    function downloadHTML(){
+      const content = '<!doctype html>' + document.documentElement.outerHTML;
+      const blob = new Blob([content], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'about_me_aqmar.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script></body>
+</html>
